@@ -1,0 +1,13 @@
+name: multistep
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+
+      config_path:
+        description: Path to run configuration
+        type: string
+        default: config.yaml
+
+    command: "python main.py {config_path}"

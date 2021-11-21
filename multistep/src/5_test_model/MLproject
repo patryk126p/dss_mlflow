@@ -1,0 +1,23 @@
+name: test
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+
+      test_data:
+        description: Path to test dataset
+        type: string
+        default: "../3_split_data/data/iris_test.csv"
+
+      target:
+        description: Name of target variable
+        type: string
+        default: species
+
+      model_path:
+        description: Path to model
+        type: string
+        default: "../4_train_model/model/model.joblib"
+
+    command: "python run.py {test_data} {target} {model_path}"

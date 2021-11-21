@@ -1,0 +1,28 @@
+name: train
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+
+      train_data:
+        description: Train dataset path
+        type: string
+        default: "../3_split_data/data/iris_train.csv"
+
+      target:
+        description: Name of target variable
+        type: string
+        default: species
+
+      model_config:
+        description: Path to json with model configuration
+        type: string
+        default: model_config.json
+
+      model_name:
+        description: Name of model artifact
+        type: string
+        default: model.joblib
+
+    command: "python run.py {train_data} {target} {model_config} {model_name}"

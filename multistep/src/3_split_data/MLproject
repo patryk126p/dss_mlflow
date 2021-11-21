@@ -1,0 +1,28 @@
+name: split
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+
+      clean_data:
+        description: Location of clean data to split
+        type: string
+        default: "../2_clean_data/data/iris.csv"
+
+      test_size:
+        description: Size of the test split. Fraction of the dataset, or number of items
+        type: float
+        default: 0.3
+
+      random_seed:
+        description: Seed for the random number generator
+        type: float
+        default: 42
+
+      file_names:
+        description: Comma separated list of names for train and test datasets
+        type: string
+        default: "iris_train.csv,iris_test.csv"
+
+    command: "python run.py {clean_data} {test_size} {random_seed} {file_names}"

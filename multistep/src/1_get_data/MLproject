@@ -1,0 +1,18 @@
+name: download_file
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+
+      uri:
+        description: URI of file to download
+        type: string
+        default: "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+
+      file_name:
+        description: Name of the downloaded file
+        type: string
+        default: iris.data
+
+    command: "python run.py {uri} {file_name}"

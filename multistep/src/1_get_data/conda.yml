@@ -1,0 +1,9 @@
+name: download_file
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pip=20.3.3
+  - requests=2.24.0
+  - mlflow=1.19.0
+  - boto3=1.18.21
