@@ -1,0 +1,6 @@
+name: multienv
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - mlflow=1.19.0
