@@ -1,0 +1,6 @@
+name: r
+conda_env: conda.yml
+
+entry_points:
+  main:
+    command: "Rscript dummy.R"
