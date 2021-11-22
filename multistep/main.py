@@ -25,7 +25,7 @@ def go(args: argparse.Namespace):
 
     if "download" in active_steps:
         _ = mlflow.run(
-            os.path.join("src", "1_get_data"),
+            os.path.join("steps", "1_get_data"),
             "main",
             parameters={
                 "uri": config["download"]["uri"],
@@ -35,7 +35,7 @@ def go(args: argparse.Namespace):
 
     if "clean" in active_steps:
         _ = mlflow.run(
-            os.path.join("src", "2_clean_data"),
+            os.path.join("steps", "2_clean_data"),
             "main",
             parameters={
                 "raw_data": config["clean"]["raw_data"],
@@ -46,7 +46,7 @@ def go(args: argparse.Namespace):
 
     if "split" in active_steps:
         _ = mlflow.run(
-            os.path.join("src", "3_split_data"),
+            os.path.join("steps", "3_split_data"),
             "main",
             parameters={
                 "clean_data": config["split"]["clean_data"],
@@ -58,7 +58,7 @@ def go(args: argparse.Namespace):
 
     if "train" in active_steps:
         _ = mlflow.run(
-            os.path.join("src", "4_train_model"),
+            os.path.join("steps", "4_train_model"),
             "main",
             parameters={
                 "train_data": config["train"]["train_data"],
@@ -70,7 +70,7 @@ def go(args: argparse.Namespace):
 
     if "test" in active_steps:
         _ = mlflow.run(
-            os.path.join("src", "5_test_model"),
+            os.path.join("steps", "5_test_model"),
             "main",
             parameters={
                 "test_data": config["test"]["test_data"],
