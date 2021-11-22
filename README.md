@@ -1,7 +1,7 @@
 # Data Science Summit
 ## MLflow Projects
 
-Repo showing two approaches to structuring ML projects/pipelines using MLflow Projects. Additionally, MLflow Tracking used for tracking params, metrics and artifacts
+Repo showing two approaches (one in two flavours) to structuring ML projects/pipelines using MLflow Projects. Additionally, MLflow Tracking used for tracking params, metrics and artifacts
 
 ## Setup
 
@@ -22,6 +22,11 @@ mlflow run simple --experiment-name simple
 Execute to run multi-step project:
 ```
 mlflow run multistep --experiment-name multistep
+```
+
+Execute to run multi-env project:
+```
+mlflow run multienv --experiment-name multienv
 ```
 
 Execute to start local Mlflow server to see tracking UI:
