@@ -1,0 +1,5 @@
+name: bash
+
+entry_points:
+  main:
+    command: "bash dummy.sh"
