@@ -24,12 +24,13 @@ Execute to run multi-step project:
 mlflow run multistep --experiment-name multistep
 ```
 
-Execute to run multi-env project:
+Execute to run multi-env project:<br>
+(requires docker - `cd multienv/steps/1_docker` & `docker build -t mlflow_docker .` and R)
 ```
 mlflow run multienv --experiment-name multienv
 ```
 
-Execute to start local Mlflow server to see tracking UI:
+Execute to start local MLflow server to see tracking UI:
 ```
 mlflow server
 ```
