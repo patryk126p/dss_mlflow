@@ -24,6 +24,7 @@ def go():
     _ = mlflow.run(
         os.path.join("steps", "3_bash"),
         "main",
+        use_conda=False,
     )
 
 
